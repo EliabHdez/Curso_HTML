@@ -1,0 +1,224 @@
+<!DOCTYPE html><!--Declaracion del tipo de documento. Permite al navegador que version de html estamos usando-->
+<html lang="en"><!--"lang="en = Define el lenguaje a utilizar-->
+<head> <!--Representa una coleccion de metadatos para el documento. Estos puede ser metas, title, link, style, script-->
+    <meta charset="UTF-8"> <!--esta etiqueta meta con el atributo charset y el valor utf-8 nos proporciona los parametros y/o caracteres necesarios para que la pagina muestre correctamente los acentos y cualquier otro caracter especial con el que cuente la pagina y este dentro de los aceptados por el lenguaje html-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dstudio3D</title><!--Este title representa el titulo de la pagina y es el visible en la pestaña del navegador-->
+    <link rel="icon" href="/imagenes/favicon.ico"><!--Link representa o sirve para traer un archivo externo a nuestro documento, estos archivos pueden ser tales como archivos css, scripts de js, favicon o icono que se vera en la pestaña etc. El "rel" hace referencia al tipo de archivo a traer y el "href" es el archivo mediante su ruta de ubicacion-->
+
+    <!--Esta parte de abajo solo es un ejemplo de como se comportarian los atributos "data-" creados por nosotros. Esta parte de aqui es estilo, asi que esto solo es con fines de ejemplo visual. Esto se haria en CSS-->
+    <style> 
+        li[data-direccion="direccion"]{
+            color: blue;
+        }
+        li[data-telefono="telefono"]{
+            color: green;
+        }
+        li[data-contacto="contacto"]{
+            color: red;
+        }
+        li[data-general="general"]{
+            color: orange;
+        }
+    </style>
+</head>
+
+<body><!--Es todo el contenido de nuestra pagina web. Es todo lo que se mostrara en pantalla y lo que el usuario visualizara en dicha pagina web-->
+    <header><!--En este apartado va todo el contenido de nuestra "cabezera". Este contenido puede ser el banner, el menu de navegacion, etc-->
+        <img src="/imagenes/logoempresa.jpg" width="100%" height="200px" alt="Logo 2dstudio3d" title="Logo 2dstudio3d">
+        <nav><!--Representa los enlaces de navegacion de la pagina--> <!--es muy comun y suele usarse en el header para los menus de navegacion-->
+            <ul><!--Representa una lista, cuyo orden no es importante-->
+                <li><a href="/Files HTML/index.html">Inicio</a></li><!--"li" representa cada uno de los elementos de una lista ya se desordenada (li)u ordenada (ol)-->
+                <li><a href="/Files HTML/Porfolio.html">Portfolio</a></li><!--"a" Representa un link. Sirve para darle formato de vinculo a los elementos dentro de este, el "href" es donde va el elemento/ruta a donde reedirigira el vinculo-->
+                <li><a href="/Files HTML/Modelado3D.html">Modelado 3D</a></li>
+                <li><a href="/Files HTML/Renderizado.html">Renderizado 3D</a></li>
+                <li><a href="/Files HTML/Contacto.html">Contacto</a></li>
+            </ul>
+            <a href="#dejanos tus datos">Dejanos tus datos de contacto</a><!--La etiqueta "a" tambien nos sirve para hacer un link que nos lleve a una seccion en especifico de la pagina web, esto mediante un id en la seccion a donde queramos redirigir la pagina. En el link en el apartado href va el nombre que vamos a ocupar como id y este va a ir con una almohadilla (#) al inicio del nombre para poder hacer la vinculacion-->
+        </nav>
+    </header>
+<br>
+    <a target="blank" href="https://google.com">Enlace a Google</a><!--"target=blank sirve para abrir el enlace en una pestaña nueva y que asi no se cierre o se pierda la navegacion de la pagina que tiene dicho enlace-->
+    <br><br>
+
+    <img src="/imagenes/Renderfinal03.jpg" < alt="Centro comercial Asmacati Pasillo principal" title="Centro Comercial Asmacati Pasillo Principal" width="45%" id="Renderfinal03">
+    <!--
+        Sirve para cargar imagenes en la pagina web
+        "src"= Ruta de la imagen, ya se local o externa (carpeta).
+        "alt" = Nombre o referencia de la imagen. Este nombre o apartado aparecera en lugar de la imagen cuando esta no sea visible o no este disponible. tambien ayuda a personas ciegas, ya que al no poder ver la imagen el navegador por medio del audio les indicara que hay en ese apartado. 
+        "title" = Nombre de la imagen o referencia de esta. Este nombre aparecera cuando en la pagina pasemos el cursor sobre la imagen.
+        "ADICIONAL A ESTO, ESTE APARTADO TAMBIEN ES IMPORTANTE PARA EL SEO YA QUE LE ESTAMOS DICIENDO QUE HAY EN ESE IMAGEN, PARA QUE EN EL MOMENTO DE POSICIONAR NUESTRA WEB SEPA QUE CONTENIDO TIENE NUESTRA WEB"
+        "width" y "height" tambien son atributos que podemos utilizar para darle tamaño, sin embargo esto es recomendable hacerlo en css 
+    -->
+
+        <video src="/videos/avion3dsmax.mp4" controls width=50% title="Modelado avion"></video><!--
+            Sirve como su nombre lo indica para cargar videos en la pag web
+            "src"=Ruta local o externa del video (carpeta).
+            "controls"=Controles para manipular el video, sin estos el video parece como si fuera una imagen.
+            "poster"=Le asigna una imagen de fondo que se mostrara en un inicio antes de reproducir el video.
+            "muted"=Sirve para que el video venga sin sonido por defecto. Con esto el usuario es el que activa el sonido de forma manual-->
+    <br><br>
+        <audio src="/audios/WhatsApp Ptt 2019-09-23 at 16.12.52.ogg" controls></audio><!--
+            Sirve como su nombre lo indica para cargar audios en la pag web
+            "src"=Ruta local o externa del audio (carpeta).
+            "controls"=Controles para manipular el audio, sin estos el audio no es visible en la pagina web.
+            "muted"=Sirve para que el audio venga sin sonido por defecto. Con esto el usuario es el que activa el sonido de forma manual-->
+            <br><br>
+            <a href="/imagenes/Renderfinal03.jpg" id="Renderfinal03"><img src="/imagenes/Renderfinal03.jpg" alt="" width="50%"></a><!--Este forma de estructurar un link nos permite visualizar la imagen, pero al ser un link, la imagen pasa a serlo tambien lo cual nos permite abrir la imagen a pantalla completa. Si no agregamos la etiqueta img, el link solo aparecera como un link de texto el cual nos permitira abrir la imagen, pero no sera visible de entrada en la pagina-->
+            <br>
+            <a href="/imagenes/Renderfinal03.jpg" download>Download image</a><!--La etiqueta a con el atributo dowload nos permite generar la descarga del archivo en cuestion. Este aparecera como cualquier otro link. El archivo se descargara con el nombre con el que lo tengamos en el servidor o en el apartado de "download" podemos agregar el nombre con el que queramos sea descargado el archivo ("=xxx")-->
+<br><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7513.251077151353!2d-99.2321439!3d19.68597485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21fa03bf6fcd9%3A0x15f8a416fb3db5d2!2sCofradia%20de%20San%20Miguel%2C%20Cuautitl%C3%A1n%20Izcalli%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1601069855438!5m2!1ses-419!2smx" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><!--"iframe permite vincular enlaces de paginas web externas (youtube, google, maps etc). Este iframe se encuentra en el apartado de compartir, lo podemos encontrar en la opción incorporar
+                "width", "height", "frameborder" valen para lo mismo que en img y video
+            "allowfullscreen"=Sirve para que en la pagina web este disponible la opcion de pantalla completa. Ej como en un video proveniente de youtube. Con el allowfullscreen podemos activar para verlo a pantalla completa, pero si lo quitamos, aunque nos muestre el icono de agrandar pantalla no va a estar disponible la funcion como tal-->                
+<br>
+<br>
+<br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ACU92JHNuyc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <!---------------------------------------------------------------------->
+            <!--  DE AQUI PARA ABAJO INCORPORE LOS ATRIBUTOS. LOS CUALES SON:
+                    ATRIBUTOS BASICOS:    
+                        "class","id","role", "style"  
+                    ATRIBUTOS DE INTERNACIONALIZACION:    
+                        "lang"= Language, "en"= Idioma (es=español, en=ingles). Este  suele verse y ocuparse siempre en el "HTML" inicial: <html> lang="en"
+                        "dir"= Direction. Hace referencia a la direccion de la escritura empleada. "auto", "ltr", "rtl"
+                    ATRIBUTOS DE FOCO:
+                        "no son un etiquetado en si, este atributo lo que representa es que cuando demos click en un elemento, seccion o en un "input" que es la mayoria de casos, este se va a resaltar de manera diferente al resto adquiriendo otro estilo y comportamiento visual. Se puede ver el ejemplo al final del archivo o de la pagina web"
+                    ATRIBUTOS PERSONALIZADOS:
+                        "data-" = Estos atributos como su nombre lo indica son personalizados y creados por nosotros, sin embargo tienen que empezar siempre con la estructura "data-" y a continuacion nosotros podemos agregar lo que queramos. Sirven como el atributo "class" y con estos podermos ingresar a los elementos con este atributo en los archivos CSS y JS para poder manipularlos 
+                    Y SUS DEFINICIONES ESTAN EN EL APARTADO DONDE FUERON UTILIZADOS-->
+            <!---------------------------------------------------------------------->
+
+    <div class="container" id="div-prinicpal"><!--Se utiliza para agrupar elementos que tienen relacion. No tiene ningun significado semantico. Se utiliza para establecer relaciones padre-hijo para darles estilos-->
+        <!--"class"= Nos sirve principalmente para css y se ocupa con mucha frecuencia
+               "id"= Es un identificador. Este identificador es unico y NO SE PUEDEN REPETIR Sirve para css y para js. Sirve para hacer anclas en la pagina web. Ej hacer click en cierto elemento y que al hacer esta accion la pagina haga scroll hasta abajo de la misma en automatico-->
+        <main role="contenido-principal"><!--Representa el contenido principal de la pagina-->
+            <!--"role"= Ayuda a la gente con capacidades diferentes como ciegos y esto lo que hace es decirles a que hace referencia ese elemento/apartado/contenido.-->
+            <h1>Diseño Grafico 3D</h1><!--El h1 actua como el titulo principal o general de la pagina web--> <!--h1-h6 Representa un titulo de una seccion o bloque. Indica la importancia de ese bloque dependiendo del tipo de h usado. El "h1" solo puede ser usado una sola vez y es el mas importante-->
+                <article><!--Representa un contenido completo dentro de una secciom. Se recomienda que dentro exista un encabezado-->
+                    <h2>Campos de <em>diseño grafico</em> en 2dstudio3d</h2><!--h2, subsecciondel h1--> <!--h2-h6 actuan como subtitulos de la pagina web y estos se van ocpuando de acuerdo a la importancia o relevancia de dichos subtitulos-->
+                        <!--"em" Representa el énfasis de su contenido. En la pagina web se representa con letras cursivas/italicas(texto inclinado)-->
+                    <section><!--Divide un bloque de contenido. Los bloques que comforman dichas secciones tienen relacion entre si, pero no tratan de lo mismo ej. 2 noticias. ambas son noticias pero son noticias diferentes-->
+                        <h3><!--h3, tambien representa subseccion del h2, y asi sucesivamente-->
+                            <i>Modelado 3D</i><!--"i" sirve para dar estilo o propiedad de cursiva a las letras/palabras-->
+                        </h3>
+                            <p style="color:red"><!--Representa un parrafo, el cual es el elemento para distribuir el texto en parrafos-->
+                                <!--"style"= Permite darle diferentes formatos (color. margin, padding, font size etc) al texto, imagenes etc, sin embargo esto no es recomendable incorporarlo en el documento HTML. Los styles (estilos) se le deben de dar preferentemente en CSS-->
+                                Lorem ipsum dolor sit amet consectetur adipisicing     elit. Mollitia, non quia! Totam consequuntur        corrupti ipsa eos! Pariatur aperiam veritatis        mollitia quaerat consequuntur asperiores enim      velit.  Saepe ad natus quidem neque.
+                            </p>
+                    </section>
+                    <section>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing     elit. Quasi libero vero ipsum. Veniam officiis     voluptates molestias minus consequatur,       exercitationem eaque dolores, placeat unde rem dolor    commodi illum laudantium quo possimus?
+                            </p>
+                    </section>
+                    <hr><!--Horizontal rule/Regla horizontal--> <!--Representa un salto temático de nivel de párrafo. Este salto se representa en la pagina por medio de una linea que atraviesa el area de la pagina-->
+                    <section>
+                        <h3><em>Renderizado 3D</em>
+                        </h3>
+                            <p>
+                               <strong><!--Representa un elemento de gran importancia. En la pagina web se ve representado con letras en estilo negritas. Tiene mas peso que la etiqueta "em". El navegador tomas las palabras o frases con "strong" como las mas relevantes-->
+                                   Lorem ipsum dolor sit amet consectetur adipisicing     elit. Mollitia, non quia! Totam consequuntur       corrupti ipsa eos! Pariatur aperiam veritatis     mollitia quaerat consequuntur asperiores enim     velit.  Saepe ad natus quidem neque.</strong>
+                            </p>
+                    </section>
+                    <section>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing  elit. Quasi libero vero ipsum. Veniam officiis   voluptates molestias minus consequatur,   exercitationem eaque dolores, placeat unde rem dolor  commodi illum laudantium quo possimus?
+                            </p>
+                    </section>
+                    <section>
+                        <pre><!--Representa un bloque de texto preformateado. Esto quiere decir que preformatea nuestro codigo y se muestra tal cual en la pagina-->
+                            Lorem ipsum dolor sit amet consectetur adipisicing  
+                            elit. Quasi libero vero ipsum.          Veniam officiis  
+                             voluptates molestias minus consequatur,   
+                             exercitationem                             eaque dolores, 
+                             placeat unde rem dolor         commodi illum 
+                             laudantium quo possimus?
+                        </pre>
+                </section>
+                </article>
+                <blockquote><!--Representa el contenido que se cita de otra fuente. Como por ej alguna frase dicha por una persona. Se utiliza siempre y cuando la frase o el contenido que se cite contenga varias lineas-->
+                                        "Si lo puedes imaginar, lo puedes modelar
+                                        Si lo puedes imaginar, lo puedes modelar
+                                        Si lo puedes imaginar, lo puedes modelar"
+                </blockquote>
+                <cite><!--Representa una referencia a un trabajo. Ej. "Render hecho por 2dstudio3D". Sirve tambien para poner el nombre del autor de la frase utilizada en el blockquote-->
+                    Moises Hernandez   /   Render hecho por 2dstudio3D <!--(como ej de que tal vez hay un render hecho por 2dstudio3D y se hizo referencia a la fuente de donde provino dicho render)-->
+                </cite>
+                    <!--Otra forma de utlizar la etiqueta "cite" seria:-->
+                    <p>
+                        Como dijo Edward Norton en <cite>American History X:</cite>
+                        <q>El odio es un lastre, la vida es demasiado corta para estarlo arrastrando</q>
+                    </p>
+        </main>
+    </div>
+    <aside><!--Se suele ocupar para contenido que va a ir por un lateral (sidebar) del contenido principal como su nombre lo indica y el contenido aunque no es el mismo o no tenga que ver de forma directa con el contenido del main esta relacionado con este de alguna manera-->
+        <h2><i>Modelado y Renderizado 3D en Arquitectura</i></h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ex quas quos nobis harum voluptatem voluptate quia laudantium, deleniti neque nisi perferendis accusamus unde officiis dolorum numquam veniam sunt natus.
+            </p>
+    </aside>
+    <h3>Lista de definiciones</h3>
+    <dl><!--Representa una lista de definiciones. Explicado de una mejor manera, es una lista donde hay un término a definir y la definición de este término-->
+        <dt>HTML</dt><!--Término a definir-->
+        <dd>Lenguaje de escritura web</dd><!--Definición del termino de la etiqueta "dt"-->
+        <dt>CSS</dt>
+        <dd>Lenguaje de diseño web</dd>
+    </dl>
+<br>
+    <p>
+        La formula del agua es H<sub>2</sub>O <!--La etiqueta sub actua y sirve como un subindice, asi bien podemos representar una formula quimica por ejemplo-->
+    </p>
+    <p>
+        Una potencia se compone de base (x) y exponente (z) X<sup>z</sup><!--La etiqueta "sup" actua y sirve como un superíndice, asi bien podemos representar potencias numericas/algebraicas-->
+    </p>
+    <br>
+    <details><!--Sirve para tener un contenido oculto, este contenido es desplegable mediante un icono de desplazamiento simbolizado por una flecha-->
+        <summary>Titulo del acordeon</summary><!--Es el texto que va a ser visible en la etiqueta "details", este sirve como titulo o referencia del contenido oculto. Este si sera visible-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga aliquid, consectetur officia quos optio quam iste quae neque voluptates aperiam recusandae dolores sit veritatis ipsa ipsum alias fugiat obcaecati!</p>
+    </details>
+    <br>
+    <dialog open="">
+        <h3>Ventana modal</h3>
+        <p>Contenido de la ventana modal</p>
+    </dialog>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
+    <!--La etiqueta dialog y details estan de forma nativa en html sin embargo es algo que se suele hacer mejor en CSS-->
+    <footer><!--Se ocupa unica y exclusivamente para el pie de pagina. Va hasta el final del body (final de la pagina)-->
+        <nav>
+            <address><!--Representa los datos de contacto de la página-->
+                <ol type="I" reversed><!--Representa una lista en orden, donde dicho orden es importante y relevanate-->
+                    <!--Atributos para listas ordenadas
+                                -Reversed: La lista aparece en orden descendente
+                                -Start: Especifica con que o en que numero va a empezar la lista. Ej. 5, 6, 7 etc..
+                                -Type: Establece de que tipo sera la lista, para esto tenemos los siguientes tipos:
+                                 1/A/a/I/i (numerica, alfanumerica mayusculas o minusculas y numeracion romana mayusculas y minusculas)-->
+                    <li data-direccion="direccion">Direccion</li>
+                    <li data-telefono="telefono">Telefono</li>
+                    <li data-general="general">Mail</li>
+                    <li data-contacto="contacto">Contacto</li>
+                    <li data-general="general">Horario</li>
+                    <li data-general="general">Nuestras redes sociales</li>
+                </ol>
+                <h4 id="dejanos tus datos">Dejanos tus datos de contacto</h4><!--"id" nos sirve como un identificador, el cual nos permite dirigirnos a una seccion en especifico de la pagina web. Este id requiere de un link (etiqueta "a") para poder redirigirnos a dicha seccion. Tanto el link como el id tienen que tener el mismo nombre para poder estar vinculados. La diferencia sera que el link en la parte del nombre llevara una almohadilla (#) al inicio del nombre y el id solo el nombre. Ver el link de arriba para cualquier duda-->
+
+                    <label for="nombre">Nombre</label><!--"label" = Sirve como un etiquetado, se usa mucho para dar este etiquetado a los "input" para poder definir que entrada de datos estamos solicitando. Esto suele usarse con mucha frecuencia en los formularios-->
+                    <input type="text" placeholder="Escribe tu nombre" id="nombre">
+            </address>
+        </nav>
+        <br>
+        <p>
+            <small>Acepto los términos y condiciones</small><!--Representa y contiene contenido secundario. No esta relacionado ni es relevante con/para el contenido de la pagina, pero es relevante para el usuario y es necesario formar parte de la pagina y su contenido-->
+        </p>
+    </footer>
+
+</body>
+</html>
+
+<!--En el archivo Contacto se abarca el tema de los formularios-->
+<!--En el archivo Renderizado se abarca el tema de las imagenes y el pixel ratio-->

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--Representa una coleccion de metadatos para el documento. Estos puede ser metas, title, link, style, script-->
+    <meta charset="UTF-8"> <!--esta meta nos proporciona los parametros necesarios para que la pagina muestre correctamente los acentos y cualquier otro caracter especial con el que cuente la pagina y este dentro de los aceptados-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title><!--Este title representa el titulo de la pagina y es el visible en la pestaña del navegador-->
+    <link rel="icon" href="/imagenes/favicon.ico"><!--Link representa o sirve para traer un archivo externo a nuestro documento, estos archivos pueden ser tales como archivos css, scripts de js, favicon o icono que se vera en la pestaña etc. El "rel" hace referencia al tipo de archivo a traer y el "href" es el archivo mediante su ruta de ubicacion-->
+</head>
+
+<style>
+    thead{
+        background-color: aqua;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    label, input{
+        display: block;
+    }
+</style>
+<!--La parte de arriba es css, lo hice aqui solo para mostrar que se pueden generar estilos con columnas y celdas utilizando las etiquetas "colgroup" y los atributos "class" y "span"-->
+
+<body><!--Es todo el contenido de nuestra pagina web. Es todo lo que se mostrara en  pantalla y lo que el usuario visualizara en dicha pagina web-->
+    <header><!--En este apartado va todo el contenido de nuestra "cabezera". Este contenido puede ser el banner, el menu de navegacion, etc-->
+        <img src="/imagenes/logoempresa.jpg" width="100%" height="200px" alt="Logo 2dstudio3d" title="Logo 2dstudio3d">
+        <nav>
+            <ul>
+                <li><a href="/Files HTML/index.html">Inicio</a></li>
+                <li><a href="/Files HTML/Porfolio.html">Portfolio</a></li>
+                <li><a href="/Files HTML/Modelado3D.html">Modelado3D</a></li>
+                <li><a href="/Files HTML/Renderizado.html">Renderizado3D</a></li>
+                <li><a href="/Files HTML/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <h1>Contacto</h1>
+        
+            <div>
+                <h2>Ponte en contacto con nosotros</h2>
+                  <div>
+                        <nav>
+                            <ul>
+                                <li>Telefono</li>
+                                <li>Mail</li>
+                                <li>WhatsApp</li>
+                            </ul>
+                        </nav>
+                  </div>
+            </div>
+
+            <!--
+                form - encierra todos los campos del formulario
+                label - representa el nombre del campo
+                button - igual que el submit
+                 datalist - crea un filtro en el que se puede generar una busqueda. Se tiene que vincular con el input list, ya que su funcion dependera de la vinculacion y el listado de la "datalist"
+                  list - 
+                input type:
+                   text (default) - entrada de texto
+                   password - campo para contraseñas (no encripta, solo oculta)
+                   submit - boton para enviar el formulario
+                   button - igual que el submit
+                   image - enviar el formulario usando una imagen personalizada
+                   reset - reinicia el formulario vaciando los campos
+                   radio - crea un radio button
+                   checkbox - crea un checkbox
+                   color - permite seleccionar un color de una paleta de colores
+                   date - permite seleccionar una fecha de un calendario
+                   datetime - local - permite seleccionar fecha y hora (obsoleto por la WHATWG)
+                   month - permite seleccionar un mes de un calendario
+                   week - permite seleccionar una semana
+                   email - sirve para introducir un mail con validacion html5 (insegura) - Validar desde JS y el servidor
+                   file - permite subir archivos al servidor
+                   number - permite introducir unicamente valores numericos
+                   range - crea un slide para seleccionar un valor numerico
+                   search - crea un campo igual que text pero con semantica de busqueda
+                   tel - crea un campo para introducir telefono, en movil sale un teclado diferente
+                   time - permite seleccionar una hora
+                   url - crea un campo para introducir una url
+            -->
+            <!--
+                Atributos
+                    Booleans
+                        - required: Hace que un campo sea obligatorio
+                        - disabled: Desactiva la interaccion con un campo
+                        - checked: Marca un radio | checkbox por defecto
+                        - selected: Marca un option por defecto. Funciona solo para los formularios que tienen etiquetas "select"
+                        - autofocus: Pone el foco automatico en un campo
+                        - readonly: Hace que el campo sea de solo lectura
+                    Otros
+                        - maxlength/minlength: Determina la cantidad maxima o minima de caracteres en un campo
+                        - min/max: Determina el minimo y el maximo de caracteres en los campos numericos
+                        - autocomplete=on/off(formulario): Permite al navegador autocompletar con los datos que tiene almacenados (En los campos con los que interactua el usuario para poner sus/... datos da opciones de autocompletado con lo almacenado en la cache. Por ej como cuando tienes varias cuentas de email en google y vas a iniciar sesion en alguna y empiezas a escribir y te da las opciones de todos los correos que has utilizado y con los que has iniciado sesion)
+                        - placeholder: Establece un valor de inicio y se borra al momento de introducir informacion. Este se vera comunmente de un color gris tenue
+            -->
+
+            <form action="#" autocomplete="on">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" required autofocus>
+                        <label for="lastname">Apellidos</label>
+                        <input type="text" id="lastname" required maxlength="20">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" disabled>
+                        <label for="sex">Sexo</label>
+                        <input type="text" id="sex" minlength="3">
+                </fieldset>
+                <button>Enviar</button>
+            </form>
+    <br><br>
+            <form action="#"><!--Se utiliza para crear formularios. dentro de este va todo lo que llevara dicho formulario-->
+                <label for="name">Nombre<!--Sirve para darle un nombre o etiqueta al input, normalmente este campo va relacionado con el input, a menos que el input sea un boton
+                    El "for" nos sirve para vincularlo con el id en el supuesto de que este exista en el input-->
+                    <input type="text" id="name" placeholder="Name"><!--El input sirve para poner un campo de entrada de datos o algo con lo que el usuario va a interactuar como un boton. Este va ligado al label si su tipo no es de tipo boton. Ademas podemos agregar etiquetas adicionales las cuales nos serviran para diferentes acciones o parametros
+                    Estas etiquetas son:
+                        type: Define que tipo de input utilizaremos
+                        id: Define un identificador para poderlo ligar al label y asi estar conectados para clickear en uno u otro
+                        placeholder: Sirve para darle un texto dentro del input el cual se borrara en el momento en el que el usuario interactue escribiendo dentro de este input(campo). Este al parecer tiene un problema con css ya que no hay manera de darle formato ni estilo-->
+                </label>
+                        <!--Los label con los input se pueden estruturar de dos maneras y estan son como la que se muestra  arriba (input dentro del label) o como se muestra abajo (cada una por separado [label arriba, input abajo])-->
+                <label for="age">Edad</label>
+                <input type="number" id="age"
+                placeholder="Age" min="18" max="99"><!--type number - Entrada de valores numericos con un sppiner para aumentar o disminuir el valor-->
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password"><!--type password - Entrada de valores ocultos, tal cual como cuando se pone una contraseña, no es seguro, ya que en el codigo fuente el usuario puede cambiar este valor y ver los caracteres-->
+                <br>
+                <input type="submit" value="Enviar formulario"><!--type submit - Crea un buton, donde el artributo "value" va a llevar el texto que aparecera en dicho boton. Este boton sirve para el envio de los datos del formulario-->
+                <br>
+                <input type="image" src="/imagenes/favicon.ico" width="20%"><!--type image - Crea un boton personalizado, este puede ser con cualquier imagen que carguemos o bien con una imagen con estilo de boton, sin embargo se puede cargar cualquier imagen y esta hara de boton, pero podria ser confuso ya que no tendria la apariencia de uno-->
+                <br>
+                <button>Enviar</button><!--Crea un boton el cual puede tener la misma funcion que el boton que se crea con el input submit, la diferencia hasta ahorita es la forma de creacion, el "button" es una etiqueta directa como "button" y el submit es un input con tipo submit-->
+                <br><br>
+                <input type="reset" value="Resetear formulario"><!--reset - Crea un buton de apariencia similar al submit. El atributo value tiene la misma funcion. Sin embargo la funcion del boton es como su nombre lo indica reiniciar el formulario para dejar los campos en blanco-->
+            </form>
+<br><br>
+            <form action="#">
+                <legend>Seleccione sexo</legend><!--Sirve para darle un titulo al formulario. Este titulo servira para todos los label y los input que esten por debajo de el-->
+                <label for="man">Hombre</label>
+                <input type="radio" id="man" name="sex" checked><!--type radio - crea un selector circular-->
+                <label for="woman">Mujer</label>
+                <input type="radio" id="woman" name="sex"><!--el atributo "name" con el valor que se le de, sirve para que cuando seleccionemos alguna opcion que contenga un boton tipo "radio" nos limite la seleccion a solo una opcion. Esto solo servira si le ponemos a todas las opciones con boton tipo radio que esten involucradas el atributo "name" con el mismo valor, que en el ejemplo fue "sex"-->
+                <br>
+                <legend>Seleccione lenguaje</legend>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" checked><!--crea un selector cuadrangular, el cual se utiliza muy comunmente cuando se le van a dar opciones de eleccion al usuario donde puede elegir unas o varias de estas opciones. Este tipo de selector puede ser seleccionado y deselecionado-->
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css">
+                <label for="js">JS</label>
+                <input type="checkbox" id="js" checked>
+<br>
+                <input type="date"><!--crea un campo para ingresar una fecha-->
+                <input type="time"><!--crea un campo para ingresar la hora-->
+                <input type="month">><!--crea un campo para ingresar un mes c/año-->
+                <input type="week">><!--crea un campo para ingresar una semana c/año-->
+                <input type="color">><!--crea un campo para seleccionar un color, que puede ser definido mediante una paleta de colores-->
+                <input type="email">><!--crea un campo para ingresar un mail. Este campo no acpetara lo escrito si no tiene formato de correo. Sin embargo al igual que el tipo password no es confiable ni seguro ya que no tiene ningun tipo de encriptacion y puede ser modificado en el codigo fuente-->
+                <input type="file"><!--Se pueden subir archivos pero se necesita js o php, solo con HTML no sirve para nada-->
+                <input type="range" min="0" max="50" step="5"><!--Crea un slider de tipo volumen. Para controlar el desplazamiento usamos atributos como "min" para el valor minimo "max" para el valor maximo y "step" para controlar cada cuanto saltara el slide-->
+                <input type="search"><!--Este es un campo de busqueda y en la pgina actual pareciera un campo de tipo texto, sin embargo cuando se visualiza en un movil este campo cambia su aspecto-->
+                <input type="tel"><!--Sirve para añadir un numero telefonico, al igual que el input search en la pagina actual no paraciera ser diferente al text, sin embargo en un celular al momento de hacer click despliega el teclado numerico-->
+            </form>
+<br>
+<br>       <!--Este tipo de lista tipo filtro es recomendable generarlo en js-->
+            <input list="browsers" name="browsers"><!--Nos permite crear un campo donde podremos generar una entrada de datos que se veran apoyados con un listado que actuaran como sugerencias para la escritura o el resultado-->
+            <datalist id="browsers"><!--Sirve para generar el espacio donde va a ir dicho listado el cual actuara como filtro de escritura o busqueda-->
+                <option value="Chrome">Chrome</option><!--option - es la etiqueta que nos va a permitir generar este listado donde el valor de "value" sera el valor que aparezca en la pagina web. Esta etiqueta tiene etiqueta de apertura y cierre, y puede contener o no la de cierre y al parecer no cambia ni afecta nada-->
+                <option value="Opera">
+                <option value="Firefox">
+                <option value="Edge">
+                <option value="Safari">
+            </datalist>
+<br>
+            <form action="#">
+                <label for="languages">Lenguajes informaticos</label>
+                    <select name="" id="languages"><!--crea un formulario de tipo selectivo por medio de un menu de opciones desplegables-->
+                        <optgroup label="Lenguajes de marcado"><!--optgroup - nos permite dividir el contenido del menu en seccion o tipos. En esta etiqueta tenemos que agregar el atributo LABEL que no servira para darle nombre al grupo que estamos creando dentro del menu-->
+                            <option value="html">HTML</option><!--Son las opciones que tendra el usuario para elegir dentro de este menu desplegable. El valor de entre las etiquetas representa lo que el usuario vera en el menu. El valor de "value" es lo que se enviara del formulario-->   
+                        </optgroup>
+                        <optgroup label="Lenguajes de diseño">
+                                <option value="css" selected>CSS</option>
+                        </optgroup>
+                        <optgroup label="Lenguajes de programacion">
+                                <option value="js">JS</option>
+                        </optgroup>
+                    </select>
+<br><br>
+                    <label for="text">Mensaje</label>
+                    <textarea name="" placeholder="Escribenos tus comentarios" id="" cols="30" rows="10"></textarea><!--crea un espacio donde se puede ingresar texto. El tamaño de este espacio esta controlado por cols (columnas) y rows (filas) aunque visualmente no esta dividido como una tabla es la manera en que determina el alto y ancho del area donde se va a escribir-->
+
+                    <label for="text">Querido usuario</label>
+                    <textarea name="Sugerencia" id="" cols="30" rows="5" readonly placeholder="Le recordamos que mensajes con palabras antisonantes seran bloqueados"></textarea>
+
+                    <label for="text">Querido usuario</label>
+                    <textarea name="Sugerencia" id="" cols="30" rows="5" readonly>Le recordamos que mensajes con palabras antisonantes seran bloqueados y eliminados</textarea>
+            </form>
+<br>
+        <table border="1"><!--Sirve para crear tablas. Dentro de esta etiqueta tienen que ir todas las etiquetas y todo el contenido que incluira la tabla-->
+            <colgroup>
+                <col span="3">
+                <col class="yellow">
+            </colgroup>
+            <caption>Horarios</caption><!--Sirve para darle un titulo a la tabla-->
+            <thead><!--Representa la cabecera de la tabla-->
+                <th>Hora</th><!--Se utiliza la etiqueta "th" en la etiqueta "thead" para crear la primer fila de la tabla. Su contenido estara en negritas-->
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </thead>
+            <tbody><!--Representa el cuerpo de la tabla-->
+                <tr><!--Representa y es la etiqueta que genera las FILAS-->
+                    <td>9:10</td><!--Representa y es la etiqueta que genera las COLUMNAS/CELDAS-->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10:10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11:10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">11:30</td><!--"rowspan" es el atributo que nos permite fusionar celdas de forma vertical-->
+                    <td colspan="5">Descanso</td><!--"colspan" es el atributo que nos permite fusionar celdas de forma horizontal-->
+                </tr>
+                <tr>
+                    <td colspan="5">Charla</td>
+                </tr>
+                <tr>
+                    <td>14:10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15:10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16:10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17:30</td>
+                    <td colspan="5">Salida</td>
+                </tr>>
+            </tbody>
+            <tfoot><!--Representa el pie de la tabla--><!--A simple vista el "tfoot" no sirve de nada y no genera un cambio o algo que sea diferente visualmente en la tabla, sin embargo su utilidad se ve si cambiamos o ponemos en otro lugar esta etiqueta, ya que al ser una etiqueta de pie de tabla no importa en que lugar ña coloquemos, el navegador entiende que es un pie y debe de ir al ultimo, por ende visualmente en la pagina siempre estara hasta abajo, al final de la tabla-->
+                <tr>
+                    <td>Horas Totales</td>
+                    <td colspan="5">8 horas 30 minutos
+                    </td>
+                </tr>>
+            </tfoot>
+        </table>
+</main>
+
+</body>
+</html>
